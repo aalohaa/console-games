@@ -1,0 +1,70 @@
+.container {
+    background-color: rgb(50, 5, 166);
+    width: 600px;
+    min-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgb(255, 255, 255);
+    margin: 100px auto;
+}
+
+.input-task {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.input-task input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.button-task {
+    background-color: rgb(28, 16, 52);
+    padding: 5px 10px;
+    color: azure;
+    outline: none;
+    border: 1px solid rgb(37, 31, 47);
+    box-shadow: 4px 4px 4px rgb(78, 47, 127);
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.button-task:hover {
+    background-color: darkgrey;
+    box-shadow: 2px 2px 4px rgb(31, 17, 60);
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    height: 40px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px bisque;
+    padding: 5px 15px;
+}
+
+.btn {
+    margin: 0 10px;
+}
+
+.delete-task {
+    background-color: rgb(166, 0, 0);
+    padding: 5px 10px;
+    color: azure;
+    outline: none;
+    border: 1px solid rgb(177, 0, 0);
+    box-shadow: 4px 4px 4px rgb(160, 0, 0);
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.delete-task:hover {
+    background-color: rgb(207, 0, 0);
+    box-shadow: 2px 2px 4px rgb(203, 0, 0);
+}

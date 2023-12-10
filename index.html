@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="input-task">
+                <input id="text" type="text" placeholder="Какие у вас планы на завтра?">
+                <button class="btn button-task" onclick="addTask()">Добавить</button>
+				<button class="btn delete-task" onclick="deleteTask()">Удалить</button>
+            </div>
+        </form>
+        <div class="tasks" id="tasks">
+
+        </div>
+    </div>
+    <script>
+        function addTask() {
+            let text = document.getElementById('text').value;
+            let id = localStorage.length + 1;
+
+            localStorage.setItem(id, text);
+        }
+
+		function showTasks() {
+			for(let i = 1; i <= localStorage.length; i++) {
+
+				let text = localStorage.getItem(i)
+
+				let task = document.createElement("div")
+				let task_text = document.createElement("div")
+				let task_id = document.createElement("div")
+
+				task.className = "task"
+				task_text.className = "task-text"
+				task_id.className = "task-id"
+
+				task_text.innerHTML = text
+				task_id.innerHTML = i
+
+				task.innerHTML = task_text.outerHTML + task_id.outerHTML
+
+				document.getElementById("tasks").appendChild(task)
+			}
+		}
+
+		showTasks()
+
+		function deleteTask() {
+			let id = localStorage.length
+			localStorage.removeItem(id)
+		}
+
+    </script>
+
+</body>
+
+</html>
